@@ -46,7 +46,19 @@
             );
         }
 
-        root.render(<Counter />);
+        function Greetings(props) {
+            const isLoggedIn = props.isLoggedIn;
+            return (
+                <div>
+                    {isLoggedIn ? (
+                        <h1>Welcome back!</h1>
+                    ) : (
+                        <h1>Please log in.</h1>
+                    )}
+                </div>
+            );
+        }
+        root.render(<Greetings isLoggedIn={true} />);
     </script>
 </body>
 
