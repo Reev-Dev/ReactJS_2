@@ -21,8 +21,11 @@
         function Welcome() {
             return <h1>Hello, Rifai!</h1>;
         }
+        function Greeting(props) {
+            return <h1>Hello, {props.name}!</h1>;
+        }
 
-        root.render(<Welcome />);
+        root.render(<Greeting name="Attar" />);
     </script>
 </body>
 
