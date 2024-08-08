@@ -58,7 +58,22 @@
                 </div>
             );
         }
-        root.render(<Greetings isLoggedIn={true} />);
+
+        function IdList(props) {
+            const numbers = props.numbers;
+            const listItems = numbers.map((number) =>
+                <li key={number.toString()}>
+                    {number}
+                </li>
+            );
+
+            return (
+                <ul>{listItems}</ul>
+            );
+        }
+
+        const id = [1, 2, 3, 4, 5];
+        root.render(<IdList numbers={id} />);
     </script>
 </body>
 
